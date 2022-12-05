@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .kotak {
+            background-color: lightblue;
+            width: 100px;
+            height: 100px;
+            margin: 50px auto 0;
+            transition: 2s;
+        }
+
+        .kotak2 {
+            background-color: lightpink;
+            width: 100px;
+            height: 100px;
+            margin: 50px auto 0;
+            transition: 2s;
+        }
+
+        .kotak3 {
+            background-color: lightseagreen;
+            width: 100px;
+            height: 100px;
+            margin: 50px auto 0;
+            transition: 4s;
+        }
+
+        .kotak4 {
+            background-color: lightsalmon;
+            width: 100px;
+            height: 100px;
+            margin: 50px auto 0;
+            animation-name: example;
+            animation-duration: 4s;
+            position: relative;
+            animation-delay: 2s;
+        }
+
+        @keyframes example {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .kotak-ease {
+            transition-timing-function: ease;
+        }
+
+        .kotak:hover {
+            /* transform: rotate(45deg) skewX(20deg); */
+            width: 300px;
+        }
+
+        .kotak2:hover {
+            transform: rotate(-45deg) scale(0.5, 0.5);
+        }
+
+        .kotak3:hover {
+            transform: translate(200px, 0px);
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kotak kotak-ease"></div>
+    <div class="kotak2 kotak-linear"></div>
+    <div class="kotak3 kotak-ease-in"></div>
+    <div class="kotak4 kotak-ease-in-out"></div>
+    <p>Contoh Transform</p>
+</body>
+
+</html>
